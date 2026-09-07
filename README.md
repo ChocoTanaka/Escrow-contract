@@ -102,4 +102,4 @@ Actionの対応、並びにAllocationを返金率等は、web2のプラットフ
 ```
 function claimAfterDeadline(bytes32 escrowId)
 ```
-締め切りを過ぎたコントラクトは、これで支払者に全額送金とする。
+締め切りを過ぎたコントラクトは、これで受取者に全額送金とする。
