@@ -86,7 +86,6 @@ escrowIdを任意に作成し、payee、relayer(ここではArbitatorとも称�
 支払うERC20トークンと数量を指定し、のちに説明するclaimAfterDeadlineのための締め切り時間（deadline UNIX時間）を設定する。<br>
 この署名をpayerが行うことで、コントラクトに資金が預けられる。<br>
 
-
 ```
 function signExecute(
         bytes32 escrowId,
@@ -95,6 +94,9 @@ function signExecute(
     )
 ```
 Actionの対応、並びにAllocationを返金率等は、web2のプラットフォームを通して作成し、2of3の署名を集めることができたらsignExecuteの通り実行とする。
+
+提案は複数併存できる。実行されるのは 2 署名が先に揃った配分である。<br>
+支払者が通常と異なる allocations を出しても、調停者＋受取者の配分が 2 票に達すれば、そちらが執行される。<br>
 
 
 ```
