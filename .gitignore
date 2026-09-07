@@ -1,0 +1,19 @@
+# Foundry
+cache/
+out/
+broadcast/
+
+# Env / keys
+.env
+.env.*
+*.pem
+
+# JS (Hardhat 併用時)
+node_modules/
+artifacts/
+cache_hardhat/
+
+# IDE
+.idea/
+*.iml
+.vscode/
